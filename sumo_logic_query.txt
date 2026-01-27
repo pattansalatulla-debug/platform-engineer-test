@@ -1,0 +1,8 @@
+sourceCategory=prod/api
+ json field=_raw "endpoint", "response_time_ms"
+ where endpoint = "/api/data"
+ where response_time_ms > 3000
+ timeslice 10m
+ count as slow_requests
+ where slow_requests > 5
+
