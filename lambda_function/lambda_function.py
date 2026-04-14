@@ -1,1 +1,5 @@
-No Python code   File Still Need To write new code
+def lambda_handler(event, context):
+    return {
+        "statusCode": 200,
+        "body": "Hello from AWS Lambda!"
+    }
